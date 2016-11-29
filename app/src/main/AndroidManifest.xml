@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zhiwei.readbook">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="Daily"
+            android:theme="@style/AppBaseTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.BaseActivity"/>
+        <activity
+            android:name=".Activity.SettingsActivity"
+            android:label="设置"
+            android:theme="@style/AppBaseTheme"/>
+        <activity
+            android:name=".Activity.AddNewBookActivity"
+            android:theme="@style/AppBaseTheme"/>
+        <activity
+            android:name=".Activity.BookDetailActivity"
+            android:label="书籍信息"
+            android:theme="@style/AppBaseTheme"/>
+        <activity
+            android:name=".Activity.SearchBookActivity"
+            android:theme="@style/AppBaseTheme"/>
+        <activity
+            android:name=".Activity.BookInfoActivity"
+            android:label="书籍信息"
+            android:theme="@style/AppBaseTheme"/>
+        <activity
+            android:name=".Activity.ContentInfoActivity"
+            android:theme="@style/AppBaseTheme"/>
+        <activity android:name=".Activity.AboutTeamActivity"
+            android:label="关于"
+            android:theme="@style/AppBaseTheme"></activity>
+    </application>
+
+</manifest>

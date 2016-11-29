@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/mainBookListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.dexafree.materialList.view.MaterialListView
+                    android:id="@+id/material_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:paddingTop="@dimen/small_padding" />
+
+                <com.gc.materialdesign.views.ButtonFloat
+                    android:id="@+id/fab_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginRight="24dp"
+                    materialdesign:iconDrawable="@drawable/ic_fab_add"
+                    android:background="@color/colorPrimary"
+                    materialdesign:animate="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/drawer_view"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/left_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0dp"
+                android:paddingTop="150dp"/>
+            <ListView
+                android:id="@+id/settingAndExitView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="0dp"
+                android:divider="@android:color/darker_gray"
+                android:layout_alignParentBottom="true"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_grey"
+                android:layout_below="@id/settingAndExitView"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>
