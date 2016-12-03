@@ -77,6 +77,7 @@ public class SearchBookActivity extends BaseActivity {
                 intent.putExtra("author",bookInfo.getAuthor());
                 intent.putExtra("pages",bookInfo.getPages());
                 intent.putExtra("summary",bookInfo.getSummary());
+                intent.putExtra("picture",bookInfo.getCover());
                 startActivityForResult(intent, 1);
             }
         });

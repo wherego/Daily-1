@@ -1,7 +1,10 @@
 package com.example.zhiwei.readbook.Activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.zhiwei.readbook.R;
@@ -9,6 +12,7 @@ import com.example.zhiwei.readbook.R;
 public class BookInfoActivity extends BaseActivity {
 
     private TextView titleView, authorView,pagesView,summaryView;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +30,12 @@ public class BookInfoActivity extends BaseActivity {
         authorView = (TextView) findViewById(R.id.tv_bookInfo_author);
         pagesView = (TextView) findViewById(R.id.tv_bookInfo_pages);
         summaryView = (TextView) findViewById(R.id.tv_bookInfo_summary);
+        imageView = (ImageView) findViewById(R.id.bookCoverView);
 
         titleView.setText(title);
         authorView.setText(author);
         pagesView.setText(pages+"页");
         summaryView.setText(summary);
+
     }
 }

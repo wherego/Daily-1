@@ -47,7 +47,6 @@ public class BookInfoAdapter extends ArrayAdapter {
             view = convertView;
             viewHolder = (ViewHolder) view.getTag();
         }
-        Utils.runAnimation(context,view,position);
         viewHolder.title.setText(bookInfo.getTitle());
         viewHolder.author.setText(bookInfo.getAuthor());
         viewHolder.pages.setText(bookInfo.getPages() + "页");
@@ -65,8 +64,6 @@ public class BookInfoAdapter extends ArrayAdapter {
     }
 
     public void addItems(ArrayList<BookInfo> newBooks) {
-        for (int i = 0; i < newBooks.size(); i++) {
-            bookInfoList.add(newBooks.get(i));
-        }
+            bookInfoList.addAll(newBooks);
     }
 }

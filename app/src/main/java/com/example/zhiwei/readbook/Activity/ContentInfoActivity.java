@@ -55,7 +55,7 @@ public class ContentInfoActivity extends BaseActivity {
         Intent intent = getIntent();
         mType = intent.getStringExtra(TYPE_KEY);
         getSupportActionBar().setTitle(mType);
-;
+
         progressBar.setVisibility(View.VISIBLE);
 
         subscription = NetWork.getGankApi().getGankContent(mType, 50, 1)

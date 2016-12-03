@@ -2,6 +2,7 @@ package com.example.zhiwei.readbook.tools;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import com.example.zhiwei.readbook.Model.BookInfo;
 import com.example.zhiwei.readbook.Model.SettingConfig;
 import java.io.ByteArrayOutputStream;
@@ -23,7 +24,7 @@ public class JsonParse {
     public static URL getSearchUrl(String keyword, int start, int count)
         throws MalformedURLException {
         //豆瓣API调用地址
-        final String SEARCH_URL = "http://api.douban.com/v2/book/search?q=";
+        final String SEARCH_URL = "https://api.douban.com/v2/book/search?q=";
         keyword = keyword.replace(" ", "%20");
         String searchUrl = SEARCH_URL + keyword + "&start" + start + "&count" + count;
         return new URL(searchUrl);
@@ -32,43 +33,44 @@ public class JsonParse {
 
     public static ArrayList<BookInfo> GetBookListByKeyword(SettingConfig sc, String keyword, int start, int count)
         throws IOException, JSONException {
-        URL url = null;
-        HttpURLConnection coon = null;
-        InputStream is = null;
-        url = JsonParse.getSearchUrl(keyword, start, count);
-
-        assert url != null;
-
-        coon = (HttpURLConnection) url.openConnection();
-
-        assert coon != null;
-        is = coon.getInputStream();
-
-        return JsonParse.GetBookInfo(sc, GetJsonString(is));
-        //        URL url = null;
-        //        HttpURLConnection conn = null;
-        //        InputStream is = null;
+        // URL url = null;
+        // HttpURLConnection coon = null;
+        // InputStream is = null;
+        // url = JsonParse.getSearchUrl(keyword, start, count);
         //
-        //        try {
-        //            url = JsonParse.getSearchUrl(keyword, start, count);
-        //        } catch (MalformedURLException e) {
-        //            e.printStackTrace();
-        //        }
+        // assert url != null;
         //
-        //        assert url != null;
-        //        try {
-        //            conn = (HttpURLConnection) url.openConnection();
-        //        } catch (IOException e) {
-        //            e.printStackTrace();
-        //        }
+        // coon = (HttpURLConnection) url.openConnection();
         //
-        //        assert conn != null;
-        //        try {
-        //            is = conn.getInputStream();
-        //        } catch (IOException e) {
-        //            e.printStackTrace();
-        //        }
-        //        return JsonParse.GetBookInfo(sc, GetJsonString(is));
+        // assert coon != null;
+        // is = coon.getInputStream();
+        //
+        // return JsonParse.GetBookInfo(sc, GetJsonString(is));
+               URL url = null;
+               HttpURLConnection conn = null;
+               InputStream is = null;
+
+               try {
+                   url = JsonParse.getSearchUrl(keyword, start, count);
+                   Log.d("URL",url.toString());
+               } catch (MalformedURLException e) {
+                   e.printStackTrace();
+               }
+
+               assert url != null;
+               try {
+                   conn = (HttpURLConnection) url.openConnection();
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+
+               assert conn != null;
+               try {
+                   is = conn.getInputStream();
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+               return JsonParse.GetBookInfo(sc, GetJsonString(is));
     }
 
 

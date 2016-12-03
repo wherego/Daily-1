@@ -7,23 +7,23 @@
     android:orientation="vertical"
     tools:context="com.example.zhiwei.readbook.Activity.AboutTeamActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:text="@string/team"
-        android:textColor="@color/black"/>
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:text="@string/team"-->
+        <!--android:textColor="@color/black"/>-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/name"
-        android:textColor="@color/black"/>
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:text="@string/name"-->
+        <!--android:textColor="@color/black"/>-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +55,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="@string/thanks_name"

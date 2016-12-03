@@ -53,8 +53,8 @@
     <string name="name">\t\t\t\t李志伟，岳亚兰，杨伦，任林娜。</string>
     <string name="func">APP功能：</string>
     <string name="func_content">\t\t\t\t①记录纸质书的阅读进度，调用豆瓣API根据关键字联网查询书籍信息。\n\n\t\t\t\t②调用gank.io的API，获得最新Android/iOS/前端的技术干货。</string>
-    <string name="thanks">感谢：</string>
-    <string name="thanks_name">\t\t\t\t帅帅的周路老师，\n\t\t\t\t美美的吴巧巧老师。</string>
+    <string name="thanks">用到的开源库：</string>
+    <string name="thanks_name">\t\tLiteOrm\n\t\tcom.github.dexafree:materiallist:2.0.0\n\t\tcom.rengwuxian.materialedittext:library:1.8.2\n\t\tcom.balysv.materialmenu:material-menu:1.5.0\n\t\tcom.getbase:floatingactionbutton:1.6.0\n\t\tio.reactivex:rxjava:1.1.6\n\t\tcom.squareup.retrofit2:retrofit:2.1.0\n\t\t\n\t\t</string>
 
     <string name="more_data">加载更多</string>
 </resources>
